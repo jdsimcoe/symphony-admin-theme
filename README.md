@@ -38,7 +38,7 @@ Next, locate the `content.debug.php` file ([Github link](https://github.com/symp
 
 `$this->addStylesheetToHead(URL . '/workspace/assets/css/devkit-override.css', 'screen', 11);`
 
-Finally, locate the `profile.debug.php` file ([Github link]()) in the `extensions/profiledevkit` folder. Find line 110 (this could change) where it does stylesheet insertion. Add this line, again, referencing your own CSS file location:
+Finally, locate the `profile.debug.php` file ([Github link](https://github.com/symphonycms/profiledevkit/blob/master/content/content.profile.php)) in the `extensions/profiledevkit` folder. Find line 110 (this could change) where it does stylesheet insertion. Add this line, again, referencing your own CSS file location:
 
 `$this->addStylesheetToHead(URL . '/workspace/assets/css/devkit-override.css', 'screen', 11);`
 
