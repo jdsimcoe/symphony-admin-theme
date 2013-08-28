@@ -19,8 +19,8 @@
 @color-accent: #668abe;
 @color-white: #ffffff;
 @color-black: #000000;
-@color-success: #c7f464;
-@color-failure: #ff6b6b;
+@color-success: #bfdc96;
+@color-failure: #dd4422;
 @color-warning: #ecd078;
 
 @font-family-sans-serif: 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -37,6 +37,14 @@ body {
 
 a {
   -webkit-transition: color 150ms ease-in-out, background 150ms ease-in-out, border-color 150ms ease-in-out;
+}
+
+// Notices
+
+p.notice {
+  nav {
+    top: 6px;
+  }
 }
 
 // Header
@@ -308,13 +316,13 @@ button.delete,
 .button.delete,
 .button.delete {
   background: @color-failure;
-  color: darken(@color-failure, 35%);
+  color: darken(@color-failure, 25%);
 
   &:hover,
   &:active,
   &:focus {
     background: lighten(@color-failure, 5%);
-    color: darken(@color-failure, 40%);
+    color: darken(@color-failure, 35%);
   }
 }
 
@@ -349,7 +357,7 @@ fieldset.apply.single button.constructor {
 
 #contents {
   .box-shadow(none);
-  border-top: 3px solid darken(@color-white, 5%);
+  border-top: 1px solid darken(@color-white, 10%);
 }
 
 // Tables
@@ -369,6 +377,11 @@ table {
   tbody {
     font-size: 14px;
   }
+}
+
+th:last-child,
+td:last-child {
+padding-right: 19px;
 }
 
 // Forms
@@ -404,7 +417,7 @@ ul.page {
 }
 
 .page-single #contents .actions, .single #contents .actions {
-  border-top: 3px solid darken(@color-white, 5%);
+  border-top: 1px solid darken(@color-white, 10%);
   margin: 0;
 }
 
