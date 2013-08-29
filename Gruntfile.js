@@ -15,7 +15,7 @@ module.exports = function (grunt) {
           yuicompress: true
         },
         files: {
-          "css/admin-override.css": "less/admin.less"
+          "css/admin_css_override.css": "less/admin.less"
         }
       },
       debug: {
@@ -23,7 +23,7 @@ module.exports = function (grunt) {
           yuicompress: true
         },
         files: {
-          "css/devkit-override.css": "less/debug.less"
+          "css/devkit_css_override.css": "less/debug.less"
         }
       }
     },
