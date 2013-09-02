@@ -201,19 +201,19 @@ p.notice {
 
   & > ul > li:hover,
   & > ul > li.active:hover {
-    color: lighten(@color-header, 15%);
+    color: lighten(@color-black, 60%);
   }
 
   ul li {
 
     ul {
-      background: lighten(desaturate(@color-header, 10%), 65%);
+      background: lighten(desaturate(@color-header, 10%), 67%);
 
       li {
-        background: lighten(desaturate(@color-header, 10%), 65%);
+        background: lighten(desaturate(@color-header, 10%), 67%);
 
         &:hover {
-          background: lighten(desaturate(@color-header, 10%), 65%);
+          background: lighten(desaturate(@color-header, 10%), 67%);
         }
       }
     }
@@ -221,13 +221,13 @@ p.notice {
 
   ul a {
     border: none !important;
-    color: lighten(@color-header, 40%);
+    color: lighten(@color-black, 60%);
     font-weight: bold;
     padding: 5px 10px;
 
     &:hover {
-      color: lighten(@color-header, 15%);
-      background:lighten(desaturate(@color-header, 10%), 65%);
+      color: lighten(@color-black, 40%);
+      background:lighten(desaturate(@color-header, 10%), 67%);
       border: none !important;
       text-shadow: none;
     }
@@ -244,7 +244,7 @@ p.notice {
     & > li {
       border: none;
       .box-shadow(none);
-      color: lighten(@color-header, 40%);
+      color: lighten(@color-black, 60%);
       height: auto;
       padding: 10px;
       text-shadow: none;
@@ -254,12 +254,13 @@ p.notice {
         text-shadow: none;
 
         &:hover {
-          background: lighten(desaturate(@color-header, 10%), 65%);
+          background: lighten(desaturate(@color-header, 10%), 67%);
         }
       }
 
       &:hover {
-        background: lighten(desaturate(@color-header, 10%), 65%);
+        color: lighten(@color-black, 40%);
+        background: lighten(desaturate(@color-header, 10%), 67%);
 
         &:after {
           display: none;
