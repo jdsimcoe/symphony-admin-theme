@@ -15,10 +15,11 @@
 // Variables
 
 @color-symphony: #b40b51;
-@color-header: #282828;
+@color-header: #423a3a;
 @color-accent: #668abe;
 @color-white: #ffffff;
 @color-black: #000000;
+@color-create: #83b340;
 @color-success: #bfdc96;
 @color-failure: #dd4422;
 @color-warning: #ecd078;
@@ -57,10 +58,10 @@ p.notice {
   }
 
   h1 {
+    background: darken(@color-header, 5%);
     font-family: @font-family-sans-serif;
     font-size: 18px;
-    font-weight: 300;
-    letter-spacing: 1px;
+    font-weight: normal;
     padding: 25px 20px;
     text-shadow: none;
 
@@ -81,7 +82,7 @@ p.notice {
 
   li {
     a {
-      background: lighten(@color-header, 5%);
+      background: lighten(@color-header, 2%);
       .border-radius(5px);
       font-size: 14px;
       padding: 10px 15px;
@@ -90,15 +91,15 @@ p.notice {
       top: -13px;
 
       &:hover {
-        background: lighten(@color-header, 10%);
+        background: lighten(@color-header, 7%);
       }
     }
     &:last-child a {
-      background: darken(@color-header, 5%);
+      background: darken(@color-header, 10%);
       font-weight: bold;
 
       &:hover {
-        background: darken(@color-header, 10%);
+        background: darken(@color-header, 15%);
       }
     }
   }
@@ -107,7 +108,7 @@ p.notice {
 // Nav
 
 #nav {
-  background: lighten(@color-header, 80%);
+  background: lighten(desaturate(@color-header, 10%), 70%);
   border: none !important;
   .box-shadow(none);
   font-size: 12px;
@@ -126,13 +127,13 @@ p.notice {
 
   ul li {
     ul {
-      background:lighten(@color-header, 75%);
+      background: lighten(desaturate(@color-header, 10%), 65%);
 
       li {
-        background:lighten(@color-header, 75%);
+        background: lighten(desaturate(@color-header, 10%), 65%);
 
         &:hover {
-          background:lighten(@color-header, 65%);
+          background: lighten(desaturate(@color-header, 10%), 60%);
         }
       }
     }
@@ -172,12 +173,12 @@ p.notice {
         text-shadow: none;
 
         &:hover {
-          background:lighten(@color-header, 75%);
+          background: lighten(desaturate(@color-header, 10%), 65%);
         }
       }
 
       &:hover {
-        background:lighten(@color-header, 75%);
+        background: lighten(desaturate(@color-header, 10%), 65%);
 
         &:after {
           display: none;
@@ -214,7 +215,7 @@ p.notice {
 // Context
 
 #breadcrumbs a, #breadcrumbs span {
-  font-family: @font-family-serif;
+  font-family: @font-family-sans-serif;
 }
 
 #context {
@@ -223,11 +224,10 @@ p.notice {
   padding: 20px 20px 15px 20px;
 
   h2 {
-    font-family: @font-family-serif !important;
+    font-family: @font-family-sans-serif !important;
     color: darken(@color-white, 40%);
     font-size: 18px;
-    font-style: italic;
-    font-weight: normal;
+    font-weight: 300;
     position: relative;
     top: 6px;
   }
@@ -299,13 +299,14 @@ button.selected,
 
 button.create,
 .button.create {
-  background: @color-success;
+  background: lighten(@color-create, 5%);
   border: none;
-  color: darken(@color-success, 30%);
+  color: darken(@color-create, 15%);
   text-shadow: none;
 
   &:hover {
-    color: darken(@color-success, 35%);
+    background: @color-create;
+    color: darken(@color-create, 25%);
   }
 }
 
@@ -315,14 +316,14 @@ button.delete,
 .button.delete,
 .button.delete,
 .button.delete {
-  background: @color-failure;
-  color: darken(@color-failure, 25%);
+  background: lighten(@color-failure, 5%);
+  color: darken(@color-failure, 20%);
 
   &:hover,
   &:active,
   &:focus {
-    background: lighten(@color-failure, 5%);
-    color: darken(@color-failure, 35%);
+    background: @color-failure;
+    color: darken(@color-failure, 25%);
   }
 }
 
