@@ -42,9 +42,83 @@ a {
 
 // Notices
 
+div.notifier {
+  background: darken(@color-header, 3%);
+  border-bottom: 1px solid lighten(@color-header, 1%);
+}
+
 p.notice {
+  background: darken(@color-header, 2%);
+
   nav {
     top: 6px;
+  }
+}
+
+/* Webkit */
+
+@-webkit-keyframes success {
+  to {
+    background-color: darken(@color-header, 3%);
+    border-color: lighten(@color-header, 1%);
+    color: #9b9b9b;
+  }
+}
+@-webkit-keyframes successlink {
+  to {
+    color: #bdc3c3;
+    border-color: #7c7c7c;
+  }
+}
+
+/* Internet Explorer */
+
+@-ms-keyframes success {
+  to {
+    background-color: darken(@color-header, 3%);
+    border-color: lighten(@color-header, 1%);
+    color: #9b9b9b;
+  }
+}
+
+@-ms-keyframes successlink {
+  to {
+    color: #bdc3c3;
+    border-color: #7c7c7c;
+  }
+}
+
+/* Opera */
+
+@-o-keyframes success {
+  to {
+    background-color: darken(@color-header, 3%);
+    border-color: lighten(@color-header, 1%);
+    color: #9b9b9b;
+  }
+}
+
+@-o-keyframes successlink {
+  to {
+    color: #bdc3c3;
+    border-color: #7c7c7c;
+  }
+}
+
+/* W3C */
+
+@keyframes success {
+  to {
+    background-color: darken(@color-header, 3%);
+    border-color: lighten(@color-header, 1%);
+    color: #9b9b9b;
+  }
+}
+
+@keyframes successlink {
+  to {
+    color: #bdc3c3;
+    border-color: #7c7c7c;
   }
 }
 
@@ -125,7 +199,13 @@ p.notice {
     z-index: 3;
   }
 
+  & > ul > li:hover,
+  & > ul > li.active:hover {
+    color: lighten(@color-header, 15%);
+  }
+
   ul li {
+
     ul {
       background: lighten(desaturate(@color-header, 10%), 65%);
 
@@ -133,7 +213,7 @@ p.notice {
         background: lighten(desaturate(@color-header, 10%), 65%);
 
         &:hover {
-          background: lighten(desaturate(@color-header, 10%), 60%);
+          background: lighten(desaturate(@color-header, 10%), 65%);
         }
       }
     }
@@ -146,7 +226,8 @@ p.notice {
     padding: 5px 10px;
 
     &:hover {
-      background:lighten(@color-header, 55%);
+      color: lighten(@color-header, 15%);
+      background:lighten(desaturate(@color-header, 10%), 65%);
       border: none !important;
       text-shadow: none;
     }
