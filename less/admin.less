@@ -30,12 +30,7 @@ body {
 }
 
 a {
-  color: @color-links;
   -webkit-transition: color 150ms ease-in-out, background 150ms ease-in-out, border-color 150ms ease-in-out;
-
-  &:hover {
-    color: darken(@color-links, 10%);
-  }
 }
 
 
@@ -514,10 +509,6 @@ table {
 th:last-child,
 td:last-child {
 padding-right: 19px;
-}
-
-tr.selected td {
-  background: darken(desaturate(@color-links, 10%), 5%);
 }
 
 // FORMS
