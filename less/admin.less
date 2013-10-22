@@ -22,6 +22,12 @@
 // BODY
 // -------------------------------------------------
 
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility !important;
+  -webkit-text-size-adjust: none !important;
+}
+
 body {
   color: #555;
   font-family: @font-family-sans-serif !important;
@@ -206,6 +212,7 @@ p.notice {
     &:last-child a {
       background: darken(@color-header, 10%);
       font-weight: bold;
+      text-transform: uppercase;
 
       &:hover {
         background: darken(@color-header, 15%);
@@ -654,5 +661,12 @@ p#version {
   font-family: @font-family-sans-serif;
   font-size: 16px;
   font-weight: 300;
+}
+
+// ELASTICSEARCH
+// -------------------------------------------------
+
+#drawer-elasticsearch {
+  margin-top: 35px;
 }
 
