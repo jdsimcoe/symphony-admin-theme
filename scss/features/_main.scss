@@ -1,0 +1,626 @@
+
+div.notifier {
+  background: darken($color-header, 3%);
+  border-bottom: 1px solid lighten($color-header, 1%);
+}
+
+p.notice {
+  background: darken($color-header, 2%);
+
+  nav {
+    top: 6px;
+  }
+}
+
+// success
+
+.notice.success {
+  background-color: lighten($color-create, 5%);
+  color: darken($color-create, 30%);
+  border-color: darken($color-create, 35%);
+
+  a {
+    color: darken($color-create, 40%);
+    border-color: darken($color-create, 20%);
+
+    &:hover {
+      color: darken($color-create, 45%);
+      border-color: darken($color-create, 25%);
+    }
+  }
+
+}
+
+// error
+
+.notice.error {
+  background-color: $color-warning;
+  color: darken($color-warning, 15%);
+  border-color: darken($color-warning, 15%);
+
+  a {
+    color: darken($color-warning, 25%);
+    border-color: darken($color-warning, 20%);
+
+    &:hover {
+      color: darken($color-warning, 30%);
+      border-color: darken($color-warning, 25%);
+    }
+  }
+
+}
+
+/* Webkit */
+
+@-webkit-keyframes success {
+  to {
+    background-color: darken($color-header, 3%);
+    border-color: lighten($color-header, 1%);
+    color: #9b9b9b;
+  }
+}
+@-webkit-keyframes successlink {
+  to {
+    color: #bdc3c3;
+    border-color: #7c7c7c;
+  }
+}
+
+/* Internet Explorer */
+
+@-ms-keyframes success {
+  to {
+    background-color: darken($color-header, 3%);
+    border-color: lighten($color-header, 1%);
+    color: #9b9b9b;
+  }
+}
+
+@-ms-keyframes successlink {
+  to {
+    color: #bdc3c3;
+    border-color: #7c7c7c;
+  }
+}
+
+/* Opera */
+
+@-o-keyframes success {
+  to {
+    background-color: darken($color-header, 3%);
+    border-color: lighten($color-header, 1%);
+    color: #9b9b9b;
+  }
+}
+
+@-o-keyframes successlink {
+  to {
+    color: #bdc3c3;
+    border-color: #7c7c7c;
+  }
+}
+
+/* W3C */
+
+@keyframes success {
+  to {
+    background-color: darken($color-header, 3%);
+    border-color: lighten($color-header, 1%);
+    color: #9b9b9b;
+  }
+}
+
+@keyframes successlink {
+  to {
+    color: #bdc3c3;
+    border-color: #7c7c7c;
+  }
+}
+
+
+// HEADER
+// -------------------------------------------------
+
+#header {
+
+  .notifier p {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  h1 {
+    background: darken($color-header, 5%);
+    font-family: $font-sans;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 25px 20px;
+    text-shadow: none;
+
+    &:before {
+      color: $color-symphony;
+      content: "•";
+      font-size: 120%;
+      line-height: 70%;
+      margin-right: 10px;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+}
+
+#session {
+
+  li {
+    a {
+      background: lighten($color-header, 2%);
+      @include border-radius(5px);
+      font-size: 14px;
+      padding: 10px 15px;
+      position: relative;
+      text-transform: capitalize;
+      top: -13px;
+
+      &:hover {
+        background: lighten($color-header, 7%);
+      }
+    }
+    &:last-child a {
+      background: darken($color-header, 10%);
+      font-weight: bold;
+
+      &:hover {
+        background: darken($color-header, 15%);
+      }
+    }
+  }
+}
+
+
+// NAV
+// -------------------------------------------------
+
+#nav {
+  background: lighten(desaturate($color-header, 10%), 70%);
+  border: none !important;
+  @include box-shadow(none);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 10px;
+  text-transform: uppercase;
+
+  li ul {
+    border: none !important;
+    @include border-radius(0);
+    @include box-shadow(none);
+    left: 0;
+    min-width: 150px;
+    z-index: 3;
+  }
+
+  & > ul > li:hover,
+  & > ul > li.active:hover {
+    color: lighten($color-black, 60%);
+  }
+
+  ul li {
+
+    ul {
+      background: lighten(desaturate($color-header, 10%), 67%);
+
+      li {
+        background: lighten(desaturate($color-header, 10%), 67%);
+
+        &:hover {
+          background: lighten(desaturate($color-header, 10%), 67%);
+        }
+      }
+    }
+  }
+
+  ul a {
+    border: none !important;
+    color: lighten($color-black, 60%);
+    font-weight: bold;
+    padding: 5px 10px;
+
+    &:hover {
+      color: lighten($color-black, 40%);
+      background:lighten(desaturate($color-header, 10%), 67%);
+      border: none !important;
+      text-shadow: none;
+    }
+  }
+
+  ul ul li:last-child a {
+    @include border-radius(0);
+  }
+
+  & > ul {
+    border: none;
+    @include border-radius(0);
+
+    & > li {
+      border: none;
+      @include box-shadow(none);
+      color: lighten($color-black, 60%);
+      height: auto;
+      padding: 10px;
+      text-shadow: none;
+
+      &.active {
+        background: $color-accent;
+        text-shadow: none;
+
+        &:hover {
+          background: lighten(desaturate($color-header, 10%), 67%);
+        }
+      }
+
+      &:hover {
+        color: lighten($color-black, 40%);
+        background: lighten(desaturate($color-header, 10%), 67%);
+
+        &:after {
+          display: none;
+        }
+      }
+
+      > a {
+        border: none;
+      }
+    }
+  }
+
+  .content, .structure {
+
+    ul {
+      border: none !important;
+      top: 51px;
+    }
+
+  }
+
+
+}
+
+#nav > ul > li:hover, #nav > ul > li.active:hover {
+  height: auto;
+}
+
+#nav.wide ul.structure li ul {
+  right: 0;
+}
+
+
+// CONTEXT
+// -------------------------------------------------
+
+#breadcrumbs a, #breadcrumbs span {
+  font-family: $font-sans;
+}
+
+#context {
+  background: $color-white;
+  @include box-shadow(none);
+  padding: 20px 20px 15px 20px;
+
+  h2 {
+    font-family: $font-sans !important;
+    color: darken($color-white, 40%);
+    font-size: 18px;
+    font-weight: 300;
+    position: relative;
+    top: 6px;
+  }
+
+  nav {
+    font-size: 14px;
+    position: relative;
+    margin-right: 5px;
+    top: 6px;
+  }
+
+  .inactive {
+
+    span {
+      color: darken($color-white, 20%);
+      font-family: $font-sans;
+      position: relative;
+      top: 10px;
+    }
+
+  }
+
+  .actions {
+    top: 19px;
+  }
+
+}
+
+
+// BUTTONS
+// -------------------------------------------------
+
+input[type=submit],
+button,
+.button {
+  background: darken($color-white, 5%);
+  border: none;
+  @include box-shadow(none);
+  color: darken($color-white, 35%);
+  display: inline-block;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 7px 15px;
+}
+
+input[type=submit]:hover,
+input[type=submit]:active,
+input[type=submit]:focus,
+button:hover,
+button:active,
+button:focus,
+.button:hover,
+.button:active,
+.button:focus {
+  color: #3c3c3c;
+  border: none;
+  @include box-shadow(none);
+  cursor: pointer;
+}
+
+input[type=submit].selected,
+button.selected,
+.button.selected {
+  background: #efefed;
+  @include box-shadow(none);
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.65);
+  border-color: rgba(0, 0, 0, 0.3);
+  text-shadow: none;
+}
+
+button.create,
+.button.create {
+  background: $color-create;
+  border: none;
+  color: darken($color-create, 30%);
+  text-shadow: none;
+
+  &:hover {
+    background: $color-create;
+    color: darken($color-create, 35%);
+  }
+}
+
+button.delete,
+button.delete,
+button.delete,
+.button.delete,
+.button.delete,
+.button.delete {
+  background: $color-failure;
+  color: $color-white;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: darken($color-failure, 10%);
+    color: $color-white;
+  }
+}
+
+button, input[type="submit"] {
+  font-family: $font-sans;
+}
+
+button.constructor,
+button.destructor {
+  font-size: 12px;
+  padding: 0 10px;
+  position: relative;
+  top: 4px;
+}
+
+fieldset.apply button {
+  padding: 0 10px;
+
+  &.constructor {
+    background: transparent;
+    position: relative;
+    top: 1px;
+  }
+
+}
+
+fieldset.apply.single button.constructor {
+  top: 4px;
+}
+
+
+// CONTENTS
+// -------------------------------------------------
+
+#contents {
+  @include box-shadow(none);
+  border-top: 1px solid darken($color-white, 10%);
+}
+
+
+// TABLES
+// -------------------------------------------------
+
+table {
+  thead {
+    font-size: 14px;
+
+    th {
+      padding: 5px 0 10px 0;
+    }
+
+    th, a {
+      font-weight: bold;
+    }
+  }
+  tbody {
+    font-size: 14px;
+  }
+}
+
+th:last-child,
+td:last-child {
+padding-right: 19px;
+}
+
+// FORMS
+// -------------------------------------------------
+
+.two.columns {
+  padding: 20px 0 0 0;
+
+  .primary {
+    padding: 20px !important;
+  }
+  .secondary {
+    padding: 20px;
+  }
+}
+
+.secondary {
+  .label {
+    font-size: 14px;
+  }
+}
+
+#utilities {
+  li {
+    padding: 4px 10px 8px 10px;
+    a {
+      font-size: 14px;
+    }
+  }
+}
+
+ul.page {
+  font-size: 14px;
+}
+
+.page-single #contents .actions, .single #contents .actions {
+  border-top: 1px solid darken($color-white, 10%);
+  margin: 0;
+}
+
+.page-single #contents .actions button, .single #contents .actions button {
+  margin-left: 20px;
+}
+
+.page-single #contents .actions input, .single #contents .actions input {
+  margin-right: 20px;
+}
+
+fieldset {
+  font-size: 14px;
+
+  label {
+    i {
+      font-size: 12px;
+    }
+    input, textarea {
+      font-weight: normal;
+    }
+  }
+}
+
+// "With selected..." menu
+
+fieldset.apply {
+  select {
+    font-family: $font-sans;
+    font-size: 12px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+fieldset.apply div {
+  background-position: right -12px;
+}
+
+fieldset.apply:hover div {
+  background-position: right 8px;
+}
+
+textarea {
+  color: lighten($color-black, 45%) !important;
+  font-family: "Menlo", monospaced !important;
+}
+
+label.file {
+
+  span.frame {
+
+    span {
+      left: 3px;
+      position: relative;
+      top: 3px;
+
+      a {
+        border: none;
+      }
+    }
+  }
+}
+
+span.frame, fieldset.frame, .frame.inline {
+  background: darken($color-white, 2%);
+  border: 2px solid darken($color-white, 5%);
+  @include box-shadow(none);
+}
+
+#password {
+
+  label {
+    margin-top: 10px;
+  }
+}
+
+#fields {
+
+  .help {
+    padding-left: 10px;
+  }
+}
+
+#contents > .actions {
+  margin: 0 -18px !important;
+}
+
+.help {
+  font-size: 12px;
+}
+
+#duplicate-entry {
+
+  span {
+    display: none !important;
+  }
+}
+
+
+// MAIN
+// -------------------------------------------------
+
+p#version {
+  color: darken($color-white, 20%);
+  font-family: $font-sans;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+// ELASTICSEARCH
+// -------------------------------------------------
+
+#drawer-elasticsearch {
+  margin-top: 35px;
+}

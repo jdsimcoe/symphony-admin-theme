@@ -1,0 +1,15 @@
+{
+  "name": "Symphony-AdminTheme",
+  "version": "1.2.0",
+  "devDependencies": {
+    "node-sass": "~0.7.0",
+    "grunt": "~0.4.1",
+    "grunt-sass": "~0.8.0",
+    "matchdep": "~0.3.0",
+    "grunt-smartrev": "^0.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsimcoe/Symphony-AdminTheme.git"
+  }
+}

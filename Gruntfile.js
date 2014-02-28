@@ -1,41 +1,43 @@
 module.exports = function (grunt) {
   'use strict';
 
-  // Load local NPM tasks
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-notify');
-
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
 
-    less: {
-      admin: {
-        options: {
-          yuicompress: true
-        },
-        files: {
-          "css/admin_css_override.css": "less/admin.less"
-        }
-      },
-      debug: {
-        options: {
-          yuicompress: true
-        },
-        files: {
-          "css/devkit_css_override.css": "less/debug.less"
-        }
-      }
+    sass: {
+     admin: {
+       options: {
+         outputStyle: 'compressed'
+       },
+       files: {
+         'css/symphony.admin.css': 'scss/admin.scss'
+       }
+     },
+     debug: {
+       options: {
+         outputStyle: 'compressed'
+       },
+       files: {
+         'css/symphony.debug.css': 'scss/debug.scss'
+       }
+     }
     },
 
     watch: {
-      less: {
-        files: 'less/*.less',
-        tasks: ['less:admin', 'less:debug']
+      grunt: { files: ['Gruntfile.js'] },
+
+      sass: {
+        files: '**/*.scss',
+        tasks: ['sass']
       }
     }
 
 });
 
-// Main task
-grunt.registerTask('default', ['less:admin', 'less:debug'])};
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
+  grunt.registerTask('default', ['sass']);
+
+}
