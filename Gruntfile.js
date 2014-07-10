@@ -12,7 +12,7 @@ module.exports = function (grunt) {
          outputStyle: 'compressed'
        },
        files: {
-         'css/symphony.admin.css': 'scss/admin.scss'
+         'css/admin_css_override.css': 'scss/admin.scss'
        }
      },
      debug: {
@@ -20,7 +20,7 @@ module.exports = function (grunt) {
          outputStyle: 'compressed'
        },
        files: {
-         'css/symphony.debug.css': 'scss/debug.scss'
+         'css/debug_css_override.css': 'scss/debug.scss'
        }
      }
     },
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
       grunt: { files: ['Gruntfile.js'] },
 
       sass: {
-        files: '**/*.scss',
+        files: 'scss/features/_*.scss',
         tasks: ['sass']
       }
     }
@@ -38,6 +38,8 @@ module.exports = function (grunt) {
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-  grunt.registerTask('default', ['sass']);
+  grunt.registerTask('core', ['sass']);
+  grunt.registerTask('build', ['core']);
+  grunt.registerTask('default', ['build', 'watch']);
 
 }

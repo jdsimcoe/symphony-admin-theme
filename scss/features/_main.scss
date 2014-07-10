@@ -186,6 +186,7 @@ p.notice {
   @include box-shadow(none);
   font-size: 12px;
   font-weight: bold;
+  min-height: 5rem;
   padding: 0 10px;
   text-transform: uppercase;
 
@@ -350,6 +351,8 @@ button,
   @include box-shadow(none);
   color: darken($color-white, 35%);
   display: inline-block;
+  height: auto;
+  min-height: 2rem;
   font-size: 14px;
   line-height: 21px;
   padding: 7px 15px;
@@ -424,7 +427,9 @@ button.destructor {
 }
 
 fieldset.apply button {
+  height: auto;
   padding: 0 10px;
+  line-height: auto;
 
   &.constructor {
     background: transparent;
@@ -598,6 +603,11 @@ span.frame, fieldset.frame, .frame.inline {
 
 .help {
   font-size: 12px;
+  padding-top: 1rem;
+
+  a {
+    margin: 1rem;
+  }
 }
 
 #duplicate-entry {

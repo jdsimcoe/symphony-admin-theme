@@ -1,26 +1,32 @@
 // Core
 // -------------------------------------------------
 
-@import
-  "bourbon/bourbon",
-  "neat/neat",
-  "variables",
-  "mixins",
-  "globals";
+// @import
+//   "bourbon/bourbon",
+//   "neat/neat",
+//   "variables",
+//   "mixins",
+//   "globals";
 
 // Features
 // -------------------------------------------------
 
+// @import
+//   "core/symphony",
+//   "core/legacy",
+//   "core/grids",
+//   "core/forms",
+//   "core/tables",
+//   "core/frames",
+//   "core/tabs",
+//   "core/drawers",
+//   "core/associations",
+//   "core/notices",
+//   "core/admin",
+//   "features/main";
+
 @import
-  "core/symphony",
-  "core/legacy",
-  "core/grids",
-  "core/forms",
-  "core/tables",
-  "core/frames",
-  "core/tabs",
-  "core/drawers",
-  "core/associations",
-  "core/notices",
-  "core/admin",
+  "variables",
+  "mixins",
+  "globals",
   "features/main";
