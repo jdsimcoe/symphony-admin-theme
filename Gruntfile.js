@@ -7,22 +7,14 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     sass: {
-     admin: {
+      main: {
        options: {
          outputStyle: 'compressed'
        },
        files: {
          'css/admin_css_override.css': 'scss/admin.scss'
        }
-     },
-     debug: {
-       options: {
-         outputStyle: 'compressed'
-       },
-       files: {
-         'css/debug_css_override.css': 'scss/debug.scss'
-       }
-     }
+      }
     },
 
     watch: {

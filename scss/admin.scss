@@ -1,32 +1,86 @@
-// Core
+// MIXINS
 // -------------------------------------------------
 
-// @import
-//   "bourbon/bourbon",
-//   "neat/neat",
-//   "variables",
-//   "mixins",
-//   "globals";
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
 
-// Features
+// NOTICES
 // -------------------------------------------------
 
-// @import
-//   "core/symphony",
-//   "core/legacy",
-//   "core/grids",
-//   "core/forms",
-//   "core/tables",
-//   "core/frames",
-//   "core/tabs",
-//   "core/drawers",
-//   "core/associations",
-//   "core/notices",
-//   "core/admin",
-//   "features/main";
+.notifier {
+  overflow: hidden;
+  background: #3a3333;
+  border-bottom: 0.1rem solid #575757;
+}
 
-@import
-  "variables",
-  "mixins",
-  "globals",
-  "features/main";
+@keyframes success {
+  to {
+    background-color: #3a3333;
+    border-color: #575757;
+    color: #9b9b9b;
+  }
+}
+
+@keyframes successlink {
+  to {
+    color: #bdc3c3;
+    border-color: #7c7c7c;
+  }
+}
+
+.notice {
+  position: relative;
+  margin: 0;
+  padding: 0.4rem 9rem 0.3rem 1.8rem;
+  border-bottom: 0.1rem solid #514747;
+  color: #9b9b9b;
+  background: #3d3535;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.notice a {
+  color: #c4c0c0;
+  border-bottom: 0.1rem solid rgba(189, 195, 195, 0.2);
+  margin: 0 0.3rem;
+}
+
+// HEADER
+// -------------------------------------------------
+
+#header h1 {
+  background: #342e2e;
+  text-shadow: 0 0.1rem 0.2rem #151313;
+
+  &:before {
+    color: #b40b51;
+    content: "•";
+    font-size: 120%;
+    line-height: 70%;
+    margin-right: 7px;
+    position: relative;
+    top: 1px;
+  }
+}
+
+// NAV
+// -------------------------------------------------
+
+#nav {
+  background: #f1f1f1;
+  @include box-shadow(none);
+  border-bottom: 0.1rem solid #E0E0E0;
+}
+
+#nav > ul > li.active {
+  background: #888;
+}
+
+// CONTEXT
+// -------------------------------------------------
+
+#context {
+  background-color: #fafafa;
+}

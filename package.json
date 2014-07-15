@@ -1,5 +1,5 @@
 {
-  "name": "Symphony-AdminTheme",
+  "name": "symphony-admin-theme",
   "version": "1.2.0",
   "devDependencies": {
     "node-sass": "~0.7.0",
@@ -11,6 +11,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jsimcoe/Symphony-AdminTheme.git"
+    "url": "git@github.com:simko-io/symphony-admin-theme.git"
   }
 }

@@ -1,4 +1,4 @@
-# Admin Theme Redesign for Symphony 2.3.x
+# Admin Theme Redesign for Symphony 2.x
 
 Since I use Symphony for the bulk of my web + client projects, I thought it would be nice to have a better admin theme. This is a work in progress.
 
@@ -13,4 +13,3 @@ To compile the Sass files using the included Grunt configuration, just ensure th
 ## Improving
 
 Feel free to fork this and improve it. Eventually if this style gets developed far enough along, Symphony Core may pick it up and implement it as the main admin theme!
-
