@@ -52,7 +52,6 @@
 
 #header h1 {
   background: #342e2e;
-  text-shadow: 0 0.1rem 0.2rem #151313;
 
   &:before {
     color: #b40b51;
@@ -72,10 +71,6 @@
   background: #f1f1f1;
   @include box-shadow(none);
   border-bottom: 0.1rem solid #E0E0E0;
-}
-
-#nav > ul > li.active {
-  background: #888;
 }
 
 // CONTEXT
