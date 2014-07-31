@@ -6,27 +6,86 @@
           box-shadow: $shadow;
 }
 
+// VARIABLES
+// -------------------------------------------------
+
+$color-header: #342e2e;
+
 // NOTICES
 // -------------------------------------------------
 
 .notifier {
   overflow: hidden;
-  background: #3a3333;
-  border-bottom: 0.1rem solid #575757;
+  background: $color-header;
+  border-bottom: 0.1rem solid lighten($color-header, 5%);
 }
+
+@-webkit-keyframes success {
+  to {
+    background-color: darken($color-header, 1%);
+    border-color: lighten($color-header, 2%);
+    color: lighten($color-header, 20%);
+  }
+}
+@-webkit-keyframes successlink {
+  to {
+    color: #e6e6e6;
+    color: rgba(255,255,255,.85);
+    border-color: lighten($color-header, 15%);
+  }
+}
+
+/* Internet Explorer */
+
+@-ms-keyframes success {
+  to {
+    background-color: darken($color-header, 1%);
+    border-color: lighten($color-header, 2%);
+    color: lighten($color-header, 20%);
+  }
+}
+
+@-ms-keyframes successlink {
+  to {
+    color: #e6e6e6;
+    color: rgba(255,255,255,.85);
+    border-color: lighten($color-header, 15%);
+  }
+}
+
+/* Opera */
+
+@-o-keyframes success {
+  to {
+    background-color: darken($color-header, 1%);
+    border-color: lighten($color-header, 2%);
+    color: lighten($color-header, 20%);
+  }
+}
+
+@-o-keyframes successlink {
+  to {
+    color: #e6e6e6;
+    color: rgba(255,255,255,.85);
+    border-color: lighten($color-header, 15%);
+  }
+}
+
+/* W3C */
 
 @keyframes success {
   to {
-    background-color: #3a3333;
-    border-color: #575757;
-    color: #9b9b9b;
+    background-color: darken($color-header, 1%);
+    border-color: lighten($color-header, 2%);
+    color: lighten($color-header, 20%);
   }
 }
 
 @keyframes successlink {
   to {
-    color: #bdc3c3;
-    border-color: #7c7c7c;
+    color: #e6e6e6;
+    color: rgba(255,255,255,.85);
+    border-color: lighten($color-header, 15%);
   }
 }
 
@@ -35,8 +94,8 @@
   margin: 0;
   padding: 0.4rem 9rem 0.3rem 1.8rem;
   border-bottom: 0.1rem solid #514747;
-  color: #9b9b9b;
-  background: #3d3535;
+  color: lighten($color-header, 10%);
+  background: $color-header;
   width: 100%;
   box-sizing: border-box;
 }
@@ -52,15 +111,16 @@
 
 #header h1 {
   background: #342e2e;
+  text-shadow: 0 0.1rem 0.2rem #151313;
 
   &:before {
-    color: #b40b51;
     content: "•";
-    font-size: 120%;
-    line-height: 70%;
-    margin-right: 7px;
     position: relative;
     top: 1px;
+    margin-right: 7px;
+    color: #b40b51;
+    font-size: 120%;
+    line-height: 70%;
   }
 }
 
@@ -68,9 +128,13 @@
 // -------------------------------------------------
 
 #nav {
-  background: #f1f1f1;
-  @include box-shadow(none);
-  border-bottom: 0.1rem solid #E0E0E0;
+ background: #f1f1f1;
+ @include box-shadow(none);
+ border-bottom: 0.1rem solid #E0E0E0;
+}
+
+#nav > ul > li.active {
+ background: #888;
 }
 
 // CONTEXT

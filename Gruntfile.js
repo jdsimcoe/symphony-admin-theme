@@ -9,7 +9,7 @@ module.exports = function (grunt) {
     sass: {
       main: {
        options: {
-         outputStyle: 'compressed'
+         // outputStyle: 'compressed'
        },
        files: {
          'css/admin_css_override.css': 'scss/admin.scss'
@@ -21,7 +21,7 @@ module.exports = function (grunt) {
       grunt: { files: ['Gruntfile.js'] },
 
       sass: {
-        files: 'scss/features/_*.scss',
+        files: 'scss/*.scss',
         tasks: ['sass']
       }
     }
