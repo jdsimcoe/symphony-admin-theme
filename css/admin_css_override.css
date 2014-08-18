@@ -7,7 +7,7 @@
   to {
     background-color: #312c2c;
     border-color: #393333;
-    color: #6a5e5e; } }
+    color: #9b9b9b; } }
 
 @-webkit-keyframes successlink {
   to {
@@ -20,7 +20,7 @@
   to {
     background-color: #312c2c;
     border-color: #393333;
-    color: #6a5e5e; } }
+    color: #9b9b9b; } }
 
 @-ms-keyframes successlink {
   to {
@@ -33,7 +33,7 @@
   to {
     background-color: #312c2c;
     border-color: #393333;
-    color: #6a5e5e; } }
+    color: #9b9b9b; } }
 
 @-o-keyframes successlink {
   to {
@@ -46,7 +46,7 @@
   to {
     background-color: #312c2c;
     border-color: #393333;
-    color: #6a5e5e; } }
+    color: #9b9b9b; } }
 
 @keyframes successlink {
   to {
@@ -59,7 +59,7 @@
   margin: 0;
   padding: 0.4rem 9rem 0.3rem 1.8rem;
   border-bottom: 0.1rem solid #514747;
-  color: #4f4646;
+  color: #9b9b9b;
   background: #342e2e;
   width: 100%;
   box-sizing: border-box; }
@@ -79,16 +79,14 @@
     margin-right: 7px;
     color: #b40b51;
     font-size: 120%;
-    line-height: 70%; }
+    line-height: 70%;
+    text-shadow: none; }
 
 #nav {
   background: #f1f1f1;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-bottom: 0.1rem solid #e0e0e0; }
-
-#nav > ul > li.active {
-  background: #888888; }
 
 #context {
   background-color: #fafafa; }
