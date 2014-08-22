@@ -400,7 +400,8 @@ nav,
   box-shadow: 0 -1px 1px rgba(6,8,8,.07);
 }
 
-.column {
+.primary.column,
+.secondary.column {
   padding-top: 2rem !important;
   padding-bottom: 2rem !important;
 }
