@@ -14,6 +14,14 @@ module.exports = function (grunt) {
        files: {
          'css/admin_css_override.css': 'scss/admin.scss'
        }
+      },
+      client: {
+        options: {
+          outputStyle: 'compressed'
+        },
+        files: {
+          '../../Sites/simko/extensions/admin_css_override/assets/admin_css_override.css': 'scss/admin.scss'
+        }
       }
     },
 
