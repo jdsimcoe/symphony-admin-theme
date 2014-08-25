@@ -235,7 +235,7 @@ h1, h2, h3 nav, #nav ul li {
     top: 35px; }
 
 #contents {
-  padding-bottom: 6.25rem;
+  padding-bottom: 5.5rem;
   background: white;
   border-top: none;
   box-shadow: 0 -1px 1px rgba(6, 8, 8, 0.07); }
@@ -245,7 +245,7 @@ h1, h2, h3 nav, #nav ul li {
   padding-bottom: 2rem !important; }
 
 .page-single #contents .actions, .single #contents .actions {
-  padding-top: 3rem; }
+  padding-top: 2.35rem; }
 
 ul.tabs {
   top: 2rem; }
