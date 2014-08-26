@@ -350,7 +350,7 @@ nav,
 #context {
   background: white;
   box-shadow: none;
-  padding: 30px 20px 20px 20px;
+  padding: 30px 20px 25px 20px;
 
   h2 {
     font-family: $sans !important;
@@ -399,6 +399,10 @@ nav,
   background: white;
   border-top: none;
   box-shadow: 0 -1px 1px rgba(6,8,8,.07);
+}
+
+#system-authors #contents {
+  padding-bottom: 8.5rem;
 }
 
 .primary.column,
@@ -450,7 +454,17 @@ ul.tabs .selected::after {
 input,
 textarea {
   height: auto;
-  padding: 0.5rem;
+  padding: .5rem;
+  border-radius: .25em;
+}
+
+select {
+  font-size: 22px;
+}
+
+.apply select,
+.actions select {
+  font-size: 11px;
 }
 
 textarea {
@@ -478,7 +492,53 @@ label {
 
 select[multiple] {
   font-family: $default;
-  font-size: 12px;
+  font-size: 13px;
+}
+
+.dark.frame.single {
+  border: none;
+}
+
+.field-datetime header input {
+  font-size: 13px;
+}
+
+.field-datetime .frame header div {
+  padding: 0.5rem;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+}
+
+[data-interface^=aui-selector] .selectize-control {
+  border-radius: .25em !important;
+}
+
+[data-interface^=aui-selector] .selectize-input {
+  font-family: $default;
+  font-size: 13px;
+  border-radius: .25em !important;
+
+  input {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+[data-interface^=aui-selector] .selectize-dropdown {
+  border-radius: .25em;
+}
+
+.field.field-entry_url {
+  font-family: $default;
+  font-size: 13px;
+
+  .frame {
+    border-radius: .25em;
+  }
+
+  .frame a {
+    font-size: 13px;
+  }
 }
 
 // BUTTONS
@@ -786,8 +846,13 @@ td:last-child {
 // COLLAPSIBLE
 // -------------------------------------------------
 
+.collapsible header.frame-header {
+  -webkit-box-shadow: 0 .1rem .4rem #e5e5e5;
+  box-shadow: 0 .1rem .4rem #e5e5e5;
+}
+
 .collapsible .content {
-  background: white;
+  background: #f5f5f5;
 }
 
 

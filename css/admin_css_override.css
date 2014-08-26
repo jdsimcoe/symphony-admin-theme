@@ -210,7 +210,7 @@ h1, h2, h3 nav, #nav ul li {
 #context {
   background: white;
   box-shadow: none;
-  padding: 30px 20px 20px 20px; }
+  padding: 30px 20px 25px 20px; }
   #context h2 {
     font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
     color: #999999;
@@ -240,6 +240,9 @@ h1, h2, h3 nav, #nav ul li {
   border-top: none;
   box-shadow: 0 -1px 1px rgba(6, 8, 8, 0.07); }
 
+#system-authors #contents {
+  padding-bottom: 8.5rem; }
+
 .primary.column, .secondary.column {
   padding-top: 2rem !important;
   padding-bottom: 2rem !important; }
@@ -267,7 +270,14 @@ ul.tabs .selected::before, ul.tabs .selected::after {
 
 input, textarea {
   height: auto;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  border-radius: 0.25em; }
+
+select {
+  font-size: 22px; }
+
+.apply select, .actions select {
+  font-size: 11px; }
 
 textarea {
   color: #737373;
@@ -289,7 +299,40 @@ label {
 
 select[multiple] {
   font-family: 'Lucida Grande', Leelawadee, Tahoma, Verdana, sans-serif;
-  font-size: 12px; }
+  font-size: 13px; }
+
+.dark.frame.single {
+  border: none; }
+
+.field-datetime header input {
+  font-size: 13px; }
+
+.field-datetime .frame header div {
+  padding: 0.5rem;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em; }
+
+[data-interface^=aui-selector] .selectize-control {
+  border-radius: 0.25em !important; }
+
+[data-interface^=aui-selector] .selectize-input {
+  font-family: 'Lucida Grande', Leelawadee, Tahoma, Verdana, sans-serif;
+  font-size: 13px;
+  border-radius: 0.25em !important; }
+  [data-interface^=aui-selector] .selectize-input input {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; }
+
+[data-interface^=aui-selector] .selectize-dropdown {
+  border-radius: 0.25em; }
+
+.field.field-entry_url {
+  font-family: 'Lucida Grande', Leelawadee, Tahoma, Verdana, sans-serif;
+  font-size: 13px; }
+  .field.field-entry_url .frame {
+    border-radius: 0.25em; }
+  .field.field-entry_url .frame a {
+    font-size: 13px; }
 
 input[type=submit], button, .button, .apply-button-left, .apply-button-right, .apply-label-left, .apply-label-right {
   padding: 0.25rem 1rem;
@@ -482,8 +525,12 @@ table tbody {
 th:last-child, td:last-child {
   padding-right: 19px; }
 
+.collapsible header.frame-header {
+  -webkit-box-shadow: 0 0.1rem 0.4rem #e5e5e5;
+  box-shadow: 0 0.1rem 0.4rem #e5e5e5; }
+
 .collapsible .content {
-  background: white; }
+  background: whitesmoke; }
 
 ul.tags li, ul.tags li:first-of-type, ul.tags li:last-of-type {
   font-size: 12px; }

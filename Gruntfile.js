@@ -20,7 +20,9 @@ module.exports = function (grunt) {
           outputStyle: 'compressed'
         },
         files: {
-          '../../Sites/simko/extensions/admin_css_override/assets/admin_css_override.css': 'scss/admin.scss'
+          '../../Sites/simko/extensions/admin_css_override/assets/admin_css_override.css': 'scss/admin.scss',
+          '../../Sites/atheycreek/extensions/admin_css_override/assets/admin_css_override.css': 'scss/admin.scss',
+          '../../Sites/saplings/extensions/admin_css_override/assets/admin_css_override.css': 'scss/admin.scss'
         }
       }
     },
