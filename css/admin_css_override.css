@@ -251,7 +251,7 @@ h1, h2, h3 nav, #nav ul li {
   padding-top: 2.35rem; }
 
 ul.tabs {
-  top: 2rem; }
+  top: 2.5rem; }
   ul.tabs li {
     border-color: #ededec; }
     ul.tabs li:hover {
@@ -299,13 +299,17 @@ label {
 
 select[multiple] {
   font-family: 'Lucida Grande', Leelawadee, Tahoma, Verdana, sans-serif;
-  font-size: 13px; }
+  font-size: 13px;
+  border-radius: 0.25em; }
 
 .dark.frame.single {
   border: none; }
 
 .field-datetime header input {
   font-size: 13px; }
+
+.field-datetime .frame header {
+  padding: 0.7rem; }
 
 .field-datetime .frame header div {
   padding: 0.5rem;
@@ -326,6 +330,10 @@ select[multiple] {
 [data-interface^=aui-selector] .selectize-dropdown {
   border-radius: 0.25em; }
 
+[data-interface^=aui-selector] .selectize-dropdown-content {
+  font-family: 'Lucida Grande', Leelawadee, Tahoma, Verdana, sans-serif;
+  font-size: 12px; }
+
 .field.field-entry_url {
   font-family: 'Lucida Grande', Leelawadee, Tahoma, Verdana, sans-serif;
   font-size: 13px; }
@@ -333,6 +341,9 @@ select[multiple] {
     border-radius: 0.25em; }
   .field.field-entry_url .frame a {
     font-size: 13px; }
+
+.frame {
+  border-radius: 0.25em; }
 
 input[type=submit], button, .button, .apply-button-left, .apply-button-right, .apply-label-left, .apply-label-right {
   padding: 0.25rem 1rem;
@@ -531,6 +542,13 @@ th:last-child, td:last-child {
 
 .collapsible .content {
   background: whitesmoke; }
+
+.duplicator ol {
+  border-radius: 0.25em; }
+
+.multiupload-drop, .multiupload-files .instance:first-of-type {
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25rem; }
 
 ul.tags li, ul.tags li:first-of-type, ul.tags li:last-of-type {
   font-size: 12px; }

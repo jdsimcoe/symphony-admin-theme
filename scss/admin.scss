@@ -420,7 +420,7 @@ nav,
 // -------------------------------------------------
 
 ul.tabs {
-  top: 2rem;
+  top: 2.5rem;
 
   li {
     border-color: #ededec;
@@ -493,6 +493,7 @@ label {
 select[multiple] {
   font-family: $default;
   font-size: 13px;
+  border-radius: .25em;
 }
 
 .dark.frame.single {
@@ -501,6 +502,10 @@ select[multiple] {
 
 .field-datetime header input {
   font-size: 13px;
+}
+
+.field-datetime .frame header {
+  padding: .7rem;
 }
 
 .field-datetime .frame header div {
@@ -528,6 +533,11 @@ select[multiple] {
   border-radius: .25em;
 }
 
+[data-interface^=aui-selector] .selectize-dropdown-content {
+  font-family: $default;
+  font-size: 12px;
+}
+
 .field.field-entry_url {
   font-family: $default;
   font-size: 13px;
@@ -539,6 +549,10 @@ select[multiple] {
   .frame a {
     font-size: 13px;
   }
+}
+
+.frame {
+  border-radius: .25em;
 }
 
 // BUTTONS
@@ -853,6 +867,19 @@ td:last-child {
 
 .collapsible .content {
   background: #f5f5f5;
+}
+
+// DUPLICATOR
+// -------------------------------------------------
+
+.duplicator ol {
+  border-radius: .25em;
+}
+
+.multiupload-drop,
+.multiupload-files .instance:first-of-type {
+  border-top-left-radius: .25em;
+  border-top-right-radius: .25rem;
 }
 
 
