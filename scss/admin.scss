@@ -493,10 +493,8 @@ fieldset.settings>legend+.help {
   margin-top: 2rem;
 }
 
-.frame-header {
-  font-size: 12px;
-}
-
+#event-documentation,
+.frame-header,
 label {
   font-size: 12px;
 }
@@ -562,6 +560,8 @@ select[multiple] {
   }
 }
 
+#event-documentation pre,
+#event-documentation pre code,
 .frame {
   border-radius: .25em;
 }
@@ -581,7 +581,7 @@ button,
   border: none;
   box-shadow: none;
   color: darken(white, 30%);
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(0, 0, 0, 0.15);
   font-family: $sans;
   font-size: 12px;
   letter-spacing: .02em;
