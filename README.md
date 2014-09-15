@@ -1,8 +1,8 @@
-# Admin Theme for Symphony 2.x
+# Admin Theme for Symphony 2.5.x
 
 Since I use Symphony for the bulk of my web + client projects, I thought it would be nice to have a better admin theme. This is a work in progress.
 
-![screenshot](http://cl.ly/image/3e1g370t0T3i/Image%202014-07-15%20at%203.46.22%20PM.png)
+![screenshot](http://cl.ly/image/3z1e0w3r0U2Y/Image%202014-09-15%20at%204.04.06%20PM.png)
 
 ## Setup
 
