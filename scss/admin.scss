@@ -14,7 +14,7 @@ $color-failure: #ff3b30;
 $color-warning: #fae420;
 // $color-links: #3f69a5;
 
-$sans: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$sans: 'Avenir Next', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 $default: 'Lucida Grande',Leelawadee,Tahoma,Verdana,sans-serif;
 
 // GLOBALS
@@ -36,11 +36,11 @@ a {
 
 h1,
 h2,
-h3
-nav,
-#nav ul li {
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
 }
 
 // NOTICES
@@ -187,7 +187,7 @@ nav,
 
 #header .notifier p {
   padding: 5px 15px;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 #header h1 {
@@ -209,26 +209,33 @@ nav,
 }
 
 #session li {
+  padding: 0 .2rem;
 
   a {
-    background: $color-header;
-    border-radius: 5px;
-    font-size: 12px;
-    padding: 7px 15px;
+    display: inline-block;
     position: relative;
+    top: -17px;
+    min-height: 2rem;
+    padding: .35rem 1.35rem;
+    font-size: 13px;
+    line-height: 1.85;
     text-transform: capitalize;
-    top: -10px;
+    background: $color-header;
+    border: 2px solid $color-header;
+    border-radius: .4rem;
 
     &:hover {
       background: lighten($color-header, 3%);
+      border-color: lighten($color-header, 3%)
     }
   }
   &:last-child a {
-    background: darken($color-header, 10%);
-    font-weight: bold;
+    background: none;
+    border: 2px solid darken($color-header, 5%);
 
     &:hover {
-      background: darken($color-header, 13%);
+      background: darken($color-header, 15%);
+      border: 2px solid darken($color-header, 15%);
     }
   }
 
@@ -239,13 +246,14 @@ nav,
 // -------------------------------------------------
 
 #nav {
+  position: absolute;
+  float: none;
+  padding: 0 10px;
+  font-size: 13px;
+  letter-spacing: .02em;
   background: white;
   border: none !important;
   box-shadow: 0 0 2px rgba(6,8,8,.15);
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: .02em;
-  padding: 0 10px;
 
   li ul {
     border: none;
@@ -280,7 +288,6 @@ nav,
   ul a {
     border: none !important;
     color: lighten($color-black, 60%);
-    font-weight: bold;
     padding: 3px 10px;
 
     &:hover {
@@ -359,9 +366,10 @@ nav,
 }
 
 #context {
+  margin-top: 40px;
+  padding: 30px 20px 25px 20px;
   background: white;
   box-shadow: none;
-  padding: 30px 20px 25px 20px;
 
   h2 {
     font-family: $sans !important;
@@ -462,11 +470,21 @@ ul.tabs .selected::after {
 // FORMS
 // -------------------------------------------------
 
+strong {
+  font-weight: 600;
+}
+
 input,
 textarea {
   height: auto;
   padding: .5rem;
   border-radius: .25em;
+  font-size: 12px;
+}
+
+textarea {
+  color: lighten(black, 45%);
+  font-family: Menlo;
 }
 
 select {
@@ -478,15 +496,10 @@ select {
   font-size: 11px;
 }
 
-textarea {
-  color: lighten(black, 45%);
-  font-family: "Menlo", Monaco, monospaced;
-  font-size: 14px;
-  line-height: 1.3;
-}
 
 legend {
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 fieldset.settings>legend+.help {
@@ -496,12 +509,12 @@ fieldset.settings>legend+.help {
 #event-documentation,
 .frame-header,
 label {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 select[multiple] {
   font-family: $default;
-  font-size: 13px;
+  font-size: 12px;
   border-radius: .25em;
 }
 
@@ -510,7 +523,7 @@ select[multiple] {
 }
 
 .field-datetime header input {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .field-datetime .frame header {
@@ -529,7 +542,7 @@ select[multiple] {
 
 [data-interface^=aui-selector] .selectize-input {
   font-family: $default;
-  font-size: 13px;
+  font-size: 12px;
   border-radius: .25em !important;
 
   input {
@@ -550,6 +563,10 @@ select[multiple] {
 .field.field-entry_url {
   font-family: $default;
   font-size: 13px;
+
+  label {
+    font-family: $sans;
+  }
 
   .frame {
     border-radius: .25em;
@@ -576,15 +593,15 @@ button,
 .apply-button-right,
 .apply-label-left,
 .apply-label-right {
-  padding: 0.25rem 1rem;
+  padding: .35rem 1.35rem;
   background: white;
   border: none;
   box-shadow: none;
   color: darken(white, 30%);
-  border: 2px solid rgba(0, 0, 0, 0.15);
+  border: .2rem solid rgba(0, 0, 0, 0.15);
   font-family: $sans;
-  font-size: 12px;
-  letter-spacing: .02em;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 input[type=submit]:hover,
@@ -639,8 +656,8 @@ button[disabled=disabled]:focus {
 
 button.create,
 .button.create {
-  color: darken($color-create, 29%);
-  background: lighten($color-create, 10%);
+  color: darken($color-create, 25%);
+  background: none;
   border-color: darken($color-create, 25%);
 }
 
@@ -650,9 +667,9 @@ button.create:focus,
 .button.create:hover,
 .button.create:active,
 .button.create:focus {
-  color: darken($color-create, 35%);
-  background: $color-create;
-  border-color: darken($color-create, 30%);
+  color: white;
+  background: darken($color-create, 25%);
+  border-color: darken($color-create, 25%);
 }
 
 /* Delete buttons */
@@ -847,18 +864,18 @@ fieldset .button {
 
 table {
   thead {
-    font-size: 12px;
+    font-size: 13px;
 
     th {
       padding: 10px 0;
     }
 
     th, a {
-      font-weight: bold;
+      font-weight: 600;
     }
   }
   tbody {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
@@ -900,7 +917,7 @@ td:last-child {
 ul.tags li,
 ul.tags li:first-of-type,
 ul.tags li:last-of-type {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 
@@ -908,5 +925,9 @@ ul.tags li:last-of-type {
 // -------------------------------------------------
 
 #version {
-  font-size: 12px;
+  font-size: 13px;
+}
+
+ul.page li {
+  font-size: 13px;
 }
