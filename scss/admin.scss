@@ -1,4 +1,9 @@
 
+// GOOGLE FONTS
+// -------------------------------------------------
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,600);
+
 // VARIABLES
 // -------------------------------------------------
 
@@ -14,7 +19,7 @@ $color-failure: #ff3b30;
 $color-warning: #fae420;
 // $color-links: #3f69a5;
 
-$sans: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$sans: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 $default: 'Lucida Grande',Leelawadee,Tahoma,Verdana,sans-serif;
 
 // GLOBALS
@@ -485,6 +490,7 @@ textarea {
 textarea {
   color: lighten(black, 45%);
   font-family: Menlo;
+  font-size: 14px;
 }
 
 select {
