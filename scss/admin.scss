@@ -14,7 +14,7 @@ $color-failure: #ff3b30;
 $color-warning: #fae420;
 // $color-links: #3f69a5;
 
-$sans: 'Avenir Next', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$sans: 'Helvetica Neue', Arial, Helvetica, sans-serif;
 $default: 'Lucida Grande',Leelawadee,Tahoma,Verdana,sans-serif;
 
 // GLOBALS
@@ -315,7 +315,7 @@ h6 {
       text-shadow: none;
 
       &.active {
-        background: $color-accent;
+        background: lighten($color-accent, 10%);
         text-shadow: none;
 
         &:hover {
@@ -601,7 +601,7 @@ button,
   border: .2rem solid rgba(0, 0, 0, 0.15);
   font-family: $sans;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: normal;
 }
 
 input[type=submit]:hover,
