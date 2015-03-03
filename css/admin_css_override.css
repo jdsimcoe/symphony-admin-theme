@@ -1,6 +1,7 @@
+@charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,600);
 body {
-  color: #555555;
+  color: #555;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif !important; }
 
 a {
@@ -19,35 +20,35 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #453c3c; }
 
 .notice.success {
-  color: #81b20d;
-  background-color: #d1f67c;
-  border-color: #6f9b0b; }
+  color: #7fb20d;
+  background-color: #d0f67c;
+  border-color: #6e9b0b; }
   .notice.success a {
-    color: #5e8309;
-    border-color: #a3e210; }
+    color: #5d8309;
+    border-color: #a0e210; }
     .notice.success a:hover {
-      color: #4d6b08;
-      border-color: #92ca0e; }
+      color: #4c6b08;
+      border-color: #8fca0e; }
 
 .aui-editor-section .notice.success {
   height: 28px;
-  color: #81b20d !important;
-  background-color: #d1f67c !important; }
+  color: #7fb20d !important;
+  background-color: #d0f67c !important; }
 
 .notice.error {
-  color: #c9b205;
+  color: #c9b505;
   background-color: #fae420;
-  border-color: #c9b205; }
+  border-color: #c9b505; }
   .notice.error a {
-    color: #978603;
-    border-color: #b09c04; }
+    color: #978803;
+    border-color: #b09f04; }
     .notice.error a:hover {
-      color: #7e7003;
-      border-color: #978603; }
+      color: #7e7203;
+      border-color: #978803; }
 
 .aui-editor-section .notice.error {
   height: 28px;
-  color: #c9b205 !important;
+  color: #c9b505 !important;
   background-color: #fae420 !important; }
 
 @-webkit-keyframes success {
@@ -132,19 +133,19 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: none; }
 
 #session li {
-  padding: 0 0.2rem; }
+  padding: 0 .2rem; }
   #session li a {
     display: inline-block;
     position: relative;
     top: -17px;
     min-height: 2rem;
-    padding: 0.35rem 1.35rem;
+    padding: .35rem 1.35rem;
     font-size: 13px;
     line-height: 1.85;
     text-transform: capitalize;
     background: #423a3a;
     border: 2px solid #423a3a;
-    border-radius: 0.4rem; }
+    border-radius: .4rem; }
     #session li a:hover {
       background: #4a4141;
       border-color: #4a4141; }
@@ -160,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
   float: none;
   padding: 0 10px;
   font-size: 13px;
-  letter-spacing: 0.02em;
+  letter-spacing: .02em;
   background: white;
   border: none !important;
   box-shadow: 0 0 2px rgba(6, 8, 8, 0.15); }
@@ -292,8 +293,8 @@ strong {
 
 input, textarea {
   height: auto;
-  padding: 0.5rem;
-  border-radius: 0.25em;
+  padding: .5rem;
+  border-radius: .25em;
   font-size: 12px; }
 
 textarea {
@@ -320,7 +321,7 @@ fieldset.settings > legend + .help {
 select[multiple] {
   font-family: 'Lucida Grande', Leelawadee, Tahoma, Verdana, sans-serif;
   font-size: 12px;
-  border-radius: 0.25em; }
+  border-radius: .25em; }
 
 .dark.frame.single {
   border: none; }
@@ -329,7 +330,7 @@ select[multiple] {
   font-size: 12px; }
 
 .field-datetime .frame header {
-  padding: 0.7rem; }
+  padding: .7rem; }
 
 .field-datetime .frame header div {
   padding: 0.5rem;
@@ -337,18 +338,18 @@ select[multiple] {
   border-top-right-radius: 0.25em; }
 
 [data-interface^=aui-selector] .selectize-control {
-  border-radius: 0.25em !important; }
+  border-radius: .25em !important; }
 
 [data-interface^=aui-selector] .selectize-input {
   font-family: 'Lucida Grande', Leelawadee, Tahoma, Verdana, sans-serif;
   font-size: 12px;
-  border-radius: 0.25em !important; }
+  border-radius: .25em !important; }
   [data-interface^=aui-selector] .selectize-input input {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
 [data-interface^=aui-selector] .selectize-dropdown {
-  border-radius: 0.25em; }
+  border-radius: .25em; }
 
 [data-interface^=aui-selector] .selectize-dropdown-content {
   font-family: 'Lucida Grande', Leelawadee, Tahoma, Verdana, sans-serif;
@@ -360,20 +361,20 @@ select[multiple] {
   .field.field-entry_url label {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; }
   .field.field-entry_url .frame {
-    border-radius: 0.25em; }
+    border-radius: .25em; }
   .field.field-entry_url .frame a {
     font-size: 13px; }
 
 #event-documentation pre, #event-documentation pre code, .frame {
-  border-radius: 0.25em; }
+  border-radius: .25em; }
 
 input[type=submit], button, .button, .apply-button-left, .apply-button-right, .apply-label-left, .apply-label-right {
-  padding: 0.35rem 1.35rem;
+  padding: .35rem 1.35rem;
   background: white;
   border: none;
   box-shadow: none;
   color: #b3b3b3;
-  border: 0.2rem solid rgba(0, 0, 0, 0.15);
+  border: .2rem solid rgba(0, 0, 0, 0.15);
   font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: normal; }
@@ -397,14 +398,14 @@ textarea[disabled=disabled], textarea[disabled=disabled]:hover, textarea[disable
 
 /* Create buttons */
 button.create, .button.create {
-  color: #92ca0e;
+  color: #8fca0e;
   background: none;
-  border-color: #92ca0e; }
+  border-color: #8fca0e; }
 
 button.create:hover, button.create:active, button.create:focus, .button.create:hover, .button.create:active, .button.create:focus {
   color: white;
-  background: #92ca0e;
-  border-color: #92ca0e; }
+  background: #8fca0e;
+  border-color: #8fca0e; }
 
 /* Delete buttons */
 button.delete, .button.delete {
@@ -534,7 +535,7 @@ fieldset input[type=submit], fieldset button, fieldset .button {
   width: 100%;
   font-family: inherit;
   height: 2.2rem;
-  background: white;
+  background: #fff;
   color: rgba(85, 85, 85, 0.95);
   font-family: 'Lucida Grande', Leelawadee, Tahoma, Verdana, sans-serif;
   font-size: 1em;
@@ -559,20 +560,25 @@ th:last-child, td:last-child {
   padding-right: 19px; }
 
 .collapsible header.frame-header {
-  -webkit-box-shadow: 0 0.1rem 0.4rem #e5e5e5;
-  box-shadow: 0 0.1rem 0.4rem #e5e5e5; }
+  -webkit-box-shadow: 0 .1rem .4rem #e5e5e5;
+  box-shadow: 0 .1rem .4rem #e5e5e5; }
 
 .collapsible .content {
-  background: whitesmoke; }
+  background: #f5f5f5; }
 
 .duplicator ol {
-  border-radius: 0.25em; }
+  border-radius: .25em; }
 
 .multiupload-drop, .multiupload-files .instance:first-of-type {
-  border-top-left-radius: 0.25em;
-  border-top-right-radius: 0.25rem; }
+  border-top-left-radius: .25em;
+  border-top-right-radius: .25rem; }
 
 ul.tags li, ul.tags li:first-of-type, ul.tags li:last-of-type {
+  font-size: 13px; }
+
+p.intro {
+  padding-top: 2em;
+  color: #b3b3b3;
   font-size: 13px; }
 
 #version {
