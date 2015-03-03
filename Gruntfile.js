@@ -21,6 +21,7 @@ module.exports = function (grunt) {
         },
         files: {
           '../../Sites/atheycreek/extensions/admin_css_override/assets/admin_css_override.css': 'scss/admin.scss',
+          '../../Sites/redeemerpdx/extensions/admin_css_override/assets/admin_css_override.css': 'scss/admin.scss',
         }
       }
     },
